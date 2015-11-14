@@ -1,0 +1,32 @@
+{
+  "name": "mooxe-docker-activemq",
+  "version": "0.0.0",
+  "description": "docker image for activemq application of mooxe",
+  "author": "FooTearth <footearth@gmail.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Mooxe000/mooxe-docker-activemq.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mooxe000/mooxe-docker-activemq/issues"
+  },
+  "homepage": "https://github.com/Mooxe000/mooxe-docker-activemq",
+  "Keywords": [
+    "docker",
+    "daocloud",
+    "image"
+  ],
+  "bin": {},
+  "scripts": {
+    "build": "docker build -t mooxe/activemq .",
+    "rebuild": "docker build --no-cache -t mooxe/activemq .",
+    "in": "docker run --name=activemq --rm -ti -v `pwd`:/root/activemq mooxe/activemq /bin/bash",
+    "push": "docker push mooxe/activemq",
+    "test": "echo 'hello'"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "shelljs": "^0.4.0"
+  }
+}
