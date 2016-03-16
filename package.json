@@ -19,8 +19,9 @@
   ],
   "bin": {},
   "scripts": {
-    "build": "docker build -t mooxe/activemq .",
-    "rebuild": "docker build --no-cache -t mooxe/activemq .",
+    "reset": "git submodule foreach git reset --hard; git submodule foreach git pull",
+    "build": "docker build -t mooxe/activemq ./activemq/",
+    "rebuild": "docker build --no-cache -t mooxe/activemq ./activemq/",
     "in": "docker run --name=activemq --rm -ti -v `pwd`:/root/activemq mooxe/activemq /bin/bash",
     "push": "docker push mooxe/activemq",
     "test": "echo 'hello'"
