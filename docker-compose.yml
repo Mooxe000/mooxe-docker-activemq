@@ -1,0 +1,9 @@
+activemq:
+  restart: always
+  image: mooxe/activemq
+  volumes:
+    - .:/root/activemq
+  ports:
+    - 8161:8161
+  entrypoint: /app/init.py
+  command: start

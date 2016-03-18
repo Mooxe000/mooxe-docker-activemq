@@ -1,0 +1,35 @@
+activemq_1:
+  restart: always
+  image: mooxe/activemq
+  volumes:
+    - ./amqconf/GoSource/amqconf/dist/activemq.xml:/opt/activemq/conf/activemq.xml
+  ports:
+    - 8161:8161
+    - 61616:61616
+    - 61613:61613
+  entrypoint: /app/init.py
+  command: start
+
+activemq_2:
+  restart: always
+  image: mooxe/activemq
+  volumes:
+    - ./amqconf/GoSource/amqconf/dist/activemq.xml:/opt/activemq/conf/activemq.xml
+  ports:
+    - 8162:8161
+    - 61617:61616
+    - 61614:61613
+  entrypoint: /app/init.py
+  command: start
+
+activemq_3:
+  restart: always
+  image: mooxe/activemq
+  volumes:
+    - ./amqconf/GoSource/amqconf/dist/activemq.xml:/opt/activemq/conf/activemq.xml
+  ports:
+    - 8163:8161
+    - 61618:61616
+    - 61615:61613
+  entrypoint: /app/init.py
+  command: start

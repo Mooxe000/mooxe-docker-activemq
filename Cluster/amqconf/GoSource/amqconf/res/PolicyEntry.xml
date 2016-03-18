@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<policyEntry
+  queue=">"
+  producerFlowControl="false"
+  memoryLimit="16mb"
+  optimizedDispatch="true"
+>
+  <deadLetterStrategy>
+    <individualDeadLetterStrategy
+      queuePrefix="DLQ."
+      useQueueForQueueMessages="true"
+    />
+  </deadLetterStrategy>
+  <pendingMessageLimitStrategy>
+    <constantPendingMessageLimitStrategy
+     limit="10"
+    />
+  </pendingMessageLimitStrategy>
+  <pendingQueuePolicy>
+    <vmQueueCursor
+    />
+  </pendingQueuePolicy>
+</policyEntry>

@@ -1,0 +1,11 @@
+<replicatedLevelDB
+  directory="${activemq.data}/leveldb"
+  replicas="3"
+  bind="tcp://0.0.0.0:0"
+  logSize="25413000"
+  indexCompression="none"
+  zkAddress="192.168.99.100:2181,192.168.99.100:2182,192.168.99.100:2183"
+  hostname="192.168.99.100"
+  sync="local_disk"
+  zkPath="/activemq/leveldb-stores"
+/>

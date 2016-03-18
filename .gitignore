@@ -9,4 +9,5 @@ trash
 /**/bower_components
 /**/node_modules
 /**/dist
+!/Cluster/amqconf/GoSource/**/dist
 /**/build

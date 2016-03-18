@@ -1,0 +1,10 @@
+{
+  "Dev": [{
+    "Amq": {
+      "From": "/root/amqconf/res/activemq.xml",
+      "To": "/root/amqconf/dist/activemq.xml",
+      "LevelDB": "/root/amqconf/res/LevelDB.xml",
+      "PolicyEntry": "/root/amqconf/res/PolicyEntry.xml"
+    }
+  }]
+}
